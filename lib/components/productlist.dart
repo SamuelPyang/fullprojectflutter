@@ -159,8 +159,8 @@ class _ProductListState extends State<ProductList> {
             return GridView.builder(
                 physics: const ScrollPhysics(),
                 shrinkWrap: true,
-                // itemCount: snapshots.data?.docs.length,
-                itemCount: 5,
+                itemCount: snapshots.data?.docs.length,
+                // itemCount: 5,
                 gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                   crossAxisCount: 2,
                   childAspectRatio:

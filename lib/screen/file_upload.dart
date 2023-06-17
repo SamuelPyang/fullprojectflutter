@@ -154,7 +154,7 @@ class _ImageUploadState extends State<ImageUpload> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: const Text("Firebase Image"),
+          title: const Text("Firebase hello "),
         ),
         body: FutureBuilder(
           builder: (context, snapshot) {

@@ -153,24 +153,24 @@ class _ImageUploadState extends State<ImageUpload> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-
-      appBar: AppBar(
-        title: const Text("Firebase Image"),
-      ),
-      body: FutureBuilder(builder: (context, snapshot){
-        if(snapshot.hasError){
-
-          return const Text("Error");
-        }
-        if(snapshot.connectionState == ConnectionState.done){
-
-          return Image.network(
-            snapshot.data.toString(),
-
-          );
-        }
-        return const Center(child: CircularProgressIndicator(),);
-      }));
-    
+        appBar: AppBar(
+          title: const Text("Firebase Image"),
+        ),
+        body: FutureBuilder(
+          builder: (context, snapshot) {
+            if (snapshot.hasError) {
+              return const Text("Error");
+            }
+            if (snapshot.connectionState == ConnectionState.done) {
+              return Image.network(
+                snapshot.data.toString(),
+              );
+            }
+            return const Center(
+              child: CircularProgressIndicator(),
+            );
+          },
+          future: null,
+        ));
   }
 }
